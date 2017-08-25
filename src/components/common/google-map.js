@@ -5,11 +5,14 @@ export default class GoogleMap extends Component {
         super(props);
     }
 
+    shouldComponentUpdate() {
+        return false;
+    }
+
     componentDidMount() {
-        console.log(this.props)
-        console.log(this.props.long)
         new google.maps.Map(this.refs.map, {
             zoom: 12,
+            streetViewControl: false,
             center: {
                 lat: this.props.lat,
                 lng: this.props.lon
