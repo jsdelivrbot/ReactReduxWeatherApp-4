@@ -11,7 +11,7 @@ module.exports = {
         loaders: [{
             test: /\.jsx?$/,
             exclude: /node_modules/,
-            loaders: ['react-hot', 'babel']
+            loaders: ['react-hot', 'babel'] //<--- 'react-hot' only for dev
         },
         {
             test: /\.css$/,
@@ -21,7 +21,7 @@ module.exports = {
     resolve: {
         extensions: ['', '.js', '.jsx']
     },
-    devServer: {
+    devServer: {                    //<--- only for dev
         historyApiFallback: true,
         contentBase: './'
     }
